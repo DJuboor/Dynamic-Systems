@@ -1,5 +1,3 @@
-%% Question 1 & 2
-
 clc, clear
 x0 = [2; 0]; 
 syms s x1(t) x2(t) 
@@ -17,14 +15,13 @@ x2 = matlabFunction(Soln.x2);  % make x2 a function
 x1(t)
 x2(t)
 
-%% Q 3
-
+%% 
 
 A = [ 0 1 ; -26 -2];
 b = [0;20];
 Xeq = inv(A)*b;
 
-%% Q4
+%% 
 clear, clc
 
 syms F(t) F(s)
@@ -33,8 +30,7 @@ F(t) = matlabFunction(F(t));
 
 F(s) = laplace(F(t));
 
-%% Q 5
-% clc, clear
+%% 
 
 x0 = [2; 0];
 syms s X_hom(s)
@@ -43,8 +39,7 @@ sI = s* eye(2)
 
 X_hom(s) = inv(sI-A)*x0
 
-%% Q6
-
+%% 
 syms F(t) F(s) X_forced(s)
 F(t) = 20*(heaviside(t-5)-heaviside(t-10));
 F(t) = matlabFunction(F(t));
@@ -55,7 +50,7 @@ F(s) = laplace(F(t));
 
 X_forced(s) = inv(sI-A)*B*F(s);
 
-%% Q7 & 8
+%% 
 clearvars -except X_forced X_hom
 clc
 

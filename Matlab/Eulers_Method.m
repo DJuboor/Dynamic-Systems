@@ -1,5 +1,3 @@
-%% Question 1-2
-
 k = 0;
 
 for i = -10:10
@@ -19,7 +17,7 @@ hold on
 k = k+1;
 end
 
-%% Question 3
+%% 
 
 clear, clc
 syms P(t)
@@ -28,7 +26,7 @@ DE = diff(P,t) == r*P * (1 - P/K)
 sol = simplify( dsolve(DE, P(0)==1) )
 p = matlabFunction(sol) % Use little p for the solution. 
 
-%% Question 4 (Exact plot)
+%% 
 figure
 
 sol = []
@@ -48,9 +46,9 @@ end
     
 
 
-%% Question 6-10
+%%
 
-% ENGR 232 Week 2 Euler's Method Example and exact solution using dsolve
+%Euler's Method Example and exact solution using dsolve
 clear, clc, close all
 
 % First declare the function f(t,y) which gives the slope dy/dt.
